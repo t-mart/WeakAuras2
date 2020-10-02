@@ -277,6 +277,8 @@ local sorters = {
         return hybridFirst
       elseif bIsHybrid and not aIsHybrid then
         return not hybridFirst
+      elseif aIsHybrid and bIsHybrid then
+        return a.dataIndex <= b.dataIndex
       else
         return nil
       end
